@@ -6,6 +6,7 @@ This is my repository for Week 5 of the Summer 2020 offering of HIST 3814 O.
 
 * [Notes for this week](notes.md)
 * [Journal for this week](journal.md)
+* [The "Exit Ticket" for the course](exit-ticket.md)
 
 ## Other weeks
 

@@ -7,7 +7,7 @@ This is my repository for Week 5 of the Summer 2020 offering of HIST 3814 O.
 * [Notes for this week](notes.md)
 * [Journal for this week](journal.md)
 * [The "Exit Ticket" for the course](exit-ticket.md)
-* [The static website hosted from this repository's files](https://erikhumphrey.github.io/hist3814o-s20-week5/)
+* [The static website hosted from this repository's files](https://erikhumphrey.github.io/hist3814o-s20-week6/)
 
 ## Other weeks
 

@@ -1,6 +1,6 @@
-# HIST 3814 O Summer 2020 — Week 5
+# HIST 3814 O Summer 2020 — Week 6
 
-This is my repository for Week 5 of the Summer 2020 offering of HIST 3814 O.
+This is my repository for Week 6 of the Summer 2020 offering of HIST 3814 O.
 
 ## Navigation
 

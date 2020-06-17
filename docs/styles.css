@@ -53,3 +53,7 @@ blockquote {
     margin-inline-end: 0px;
     font-weight: bold;
 }
+
+code {
+  color: #abbad1;
+}

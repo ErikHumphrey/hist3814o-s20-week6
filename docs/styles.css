@@ -57,3 +57,7 @@ blockquote {
 code {
   color: #abbad1;
 }
+
+a {
+  text-decoration: none;
+}

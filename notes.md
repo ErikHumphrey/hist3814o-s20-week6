@@ -2,12 +2,27 @@
 
 ## Historical observations
 
-* The techniques I decided to use for identifying and surfacing interesting historical observations were [`wget`](https://craftingdh.netlify.com/week/2/wget/), [OCR](https://craftingdh.netlify.com/week/2/ocr/), and [Excel charts](https://craftingdh.netlify.com/week/4/excel/).
+### Summary
+* The techniques I decided to use for identifying and surfacing interesting historical observations were [`wget`](https://craftingdh.netlify.com/week/2/wget/), [OCR with R](https://craftingdh.netlify.com/week/2/ocr/), and text analysis with [DataBasic's WordCounter tool](https://www.databasic.io/en/wordcounter/).
   * `wget` was used to collect data for OCR.
   * OCR was used to further collect data from the images sourced with `wget`.
-  * Excel charts were used to visualize the collected data.
-  * With more time, I would have also used OpenRefine to facilitate cleaning the OCR data, but instead, I mostly did that manually or ignored issues. 
+  * After combining all the OCR'd text into one file, the text was uploaded to WordCounter for analysis.
+  * I would have also used OpenRefine to facilitate cleaning the OCR data, but there wasn't enough OCR data to work with in this case.
 * I shared my results by making a static website and hosting it on GitHub Pages from my Week 6 repository. The website can be found [here](https://erikhumphrey.github.io/hist3814o-s20-week6/).
+  * Instead of using Markdown and a Jekyll theme, I instead used HTML and made an "[index.html](docs/index.html)", then made it look a little better with CSS in "[styles.css](docs/styles.css)".
+  * I included a short summary of the steps and technologies required to reproduce the study.
+* All the files for the analysis itself can be found in the [archive-analysis](archive-analysis) directory.
+
+### Steps
+
+* Create a text file "wget-urls.txt" with the list of [seven microfilm PDFs](https://ahpn.lib.utexas.edu/microfilm) to download for analysis.
+* `wget -i ../wget-urls.txt -r --no-parent -nd -w 2 --limit-rate=10`
+* Open R Studio and navigate to archive-analysis/ocr-output. Set that folder as your working directory.
+* Run all lines in ocr-pdf.R. This will take awhile, as there are 1,686 pages to OCR among all the PDFs. The R script first converts each page to TIFF then output text files with the contents of each page of the PDFs.
+* Open a command line in the ocr-output directory. Run `rm *.tiff` (`bash`) or `del *.tiff` (Powershell) to remove all the lingering TIFF files.
+* From the command line (e.g. `bash`), run `cat * > ../merged-text.txt` to merge all the OCR'd text files into one file.
+  * If using Powershell, try `type * > ..\merged-text.txt`
+* Visit [DataBasic's WordCounter page](https://www.databasic.io/en/wordcounter/), click "upload a file", select "merged-text.txt" and click "COUNT".
 
 ## Details omitted from exit ticket
 

@@ -11,25 +11,33 @@
         
         <h2>About the Archive</h2>
 
-            <blockquote></blockquote>
-            <p><a href=https://twitter.com/amaliasl/status/1245559883816189955>According to Amalia Skarlatou Levi</a></p>
+            <blockquote cite="https://ahpn.lib.utexas.edu/microfilm">
+                In addition to its 80 kilometers of paper documents, the Archivo Histórico de la Policía Nacional holds a number of reels of microfilm. Specific information on the content
+                of these reels is currently incomplete and it is unclear if the documents on film also exist on paper in the archive. These microfilm reels are not yet indexed, but sample
+                digitized images of the film can be downloaded below. We plan to provide access to additional reels of the AHPN microfilm here in the future.</blockquote>
+            <br><em>— Digital Archive of the Guatemalan National Police Historical Archive (https://ahpn.lib.utexas.edu/microfilm)</em>
 
         <h2>Procedure</h2>
 
         <p>To follow the steps below, the following must be installed:</p>
 
         <ul>
-            <li></li>
-            <li></li>
-            <li></li>
+            <li><code>wget</code></li>
+            <li>R Studio</li>
+            <li><code>bash</code> or PowerShell</li>
+            <li>A web browser</li>li>
         </ul>
 
         Once the above software was installed, the following steps were followed:
 
         <ol>
-            <li></li>
-            <li></li>
-            <li></li>
+            <li>Create a text file "wget-urls.txt" with the list of [seven microfilm PDFs](https://ahpn.lib.utexas.edu/microfilm) to download for analysis.</li>
+            <li>In "wget-output", run <code>wget -i ../wget-urls.txt -r --no-parent -nd -w 2 --limit-rate=10</code>.</li>
+            <li>Open R Studio and navigate to archive-analysis/ocr-output. Set that folder as your working directory.</li>
+            <li>Run all lines in ocr-pdf.R. This will take awhile, as there are 1,686 pages to OCR among all the PDFs. The R script first converts each page to TIFF then output text files with the contents of each page of the PDFs.</li>
+            <li>Open a command line in the ocr-output directory. Run <code>rm *.tiff</code> (<code>bash</code>) or <code>del *.tiff</code> (PowerShell) to remove all the lingering TIFF files.</li>
+            <li>From the command line (e.g. <code>bash</code>), run <code>cat * > ../merged-text.txt</code> to merge all the OCR'd text files into one file. If using Powershell, try <code>type * > ..\merged-text.txt</code></li>
+            <li>Visit [DataBasic's WordCounter page](https://www.databasic.io/en/wordcounter/), click "upload a file", select "merged-text.txt" and click "COUNT".</li>li>
         </ol>
 
 

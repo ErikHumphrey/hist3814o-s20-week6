@@ -31,7 +31,7 @@
         Once the above software was installed, the following steps were followed:
 
         <ol>
-            <li>Create a text file "wget-urls.txt" with the list of [seven microfilm PDFs](https://ahpn.lib.utexas.edu/microfilm) to download for analysis.</li>
+            <li>Create a text file "wget-urls.txt" with the list of <a href="https://ahpn.lib.utexas.edu/microfilm">seven microfilm PDFs</a> to download for analysis.</li>
             <li>In "wget-output", run <code>wget -i ../wget-urls.txt -r --no-parent -nd -w 2 --limit-rate=10</code>.</li>
             <li>Open R Studio and navigate to archive-analysis/ocr-output. Set that folder as your working directory.</li>
             <li>Run all lines in ocr-pdf.R. This will take awhile, as there are 1,686 pages to OCR among all the PDFs. The R script first converts each page to TIFF then output text files with the contents of each page of the PDFs.</li>

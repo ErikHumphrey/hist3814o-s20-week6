@@ -24,7 +24,7 @@
         <p>To follow the steps below, the following must be installed:</p>
 
         <ul>
-            <li><pre>wget</pre></li>
+            <li><code>wget</code></li>
             <li>R Studio</li>
             <li><code>bash</code> or PowerShell</li>
             <li>A web browser</li>
@@ -34,11 +34,11 @@
 
         <ol>
             <li>Create a text file "wget-urls.txt" with the list of <a href="https://ahpn.lib.utexas.edu/microfilm">seven microfilm PDFs</a> to download for analysis.</li>
-            <li>In "wget-output", run <pre>wget -i ../wget-urls.txt -r --no-parent -nd -w 2 --limit-rate=10</pre>.</li>
+            <li>In "wget-output", run <code>wget -i ../wget-urls.txt -r --no-parent -nd -w 2 --limit-rate=10</code>.</li>
             <li>Open R Studio and navigate to archive-analysis/ocr-output. Set that folder as your working directory.</li>
             <li>Run all lines in ocr-pdf.R. This will take awhile, as there are 1,686 pages to OCR among all the PDFs. The R script first converts each page to TIFF then output text files with the contents of each page of the PDFs.</li>
-            <li>Open a command line in the ocr-output directory. Run <pre>rm *.tiff</pre> (<pre>bash</pre>) or <pre>del *.tiff</pre> (PowerShell) to remove all the lingering TIFF files.</li>
-            <li>From the command line (e.g. <pre>bash</pre>), run <pre>cat * > ../merged-text.txt</pre> to merge all the OCR'd text files into one file. If using Powershell, try <pre>type * > ..\merged-text.txt</pre></li>
+            <li>Open a command line in the ocr-output directory. Run <code>rm *.tiff</code> (<code>bash</code>) or <code>del *.tiff</code> (PowerShell) to remove all the lingering TIFF files.</li>
+            <li>From the command line (e.g. <code>bash</code>), run <code>cat * > ../merged-text.txt</code> to merge all the OCR'd text files into one file. If using Powershell, try <code>type * > ..\merged-text.txt</code></li>
             <li>Visit <a href="https://www.databasic.io/en/wordcounter/">DataBasic's WordCounter page</a>, click "upload a file", select "merged-text.txt" and click "COUNT".</li>
         </ol>
 

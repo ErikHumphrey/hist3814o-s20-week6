@@ -2,9 +2,12 @@
 
 ## Historical observations
 
-* I selected 
-* The techniques I decided to use for identifying and surfacing interesting historical observations were [](), [](), and []().
-* Though I enjoy making a good poster, I enjoy making websites even more. I shared my results by making a static website and hosting it on GitHub Pages. 
+* The techniques I decided to use for identifying and surfacing interesting historical observations were [`wget`](https://craftingdh.netlify.com/week/2/wget/), [OCR](https://craftingdh.netlify.com/week/2/ocr/), and [Excel charts](https://craftingdh.netlify.com/week/4/excel/).
+  * `wget` was used to collect data for OCR.
+  * OCR was used to further collect data from the images sourced with `wget`.
+  * Excel charts were used to visualize the collected data.
+  * With more time, I would have also used OpenRefine to facilitate cleaning the OCR data, but instead, I mostly did that manually or ignored issues. 
+* I shared my results by making a static website and hosting it on GitHub Pages from my Week 6 repository. The website can be found [here](https://erikhumphrey.github.io/hist3814o-s20-week6/).
 
 ## Details omitted from exit ticket
 

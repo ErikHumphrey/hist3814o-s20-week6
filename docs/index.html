@@ -37,7 +37,7 @@
             <li>Run all lines in ocr-pdf.R. This will take awhile, as there are 1,686 pages to OCR among all the PDFs. The R script first converts each page to TIFF then output text files with the contents of each page of the PDFs.</li>
             <li>Open a command line in the ocr-output directory. Run <pre>rm *.tiff</pre> (<pre>bash</pre>) or <pre>del *.tiff</pre> (PowerShell) to remove all the lingering TIFF files.</li>
             <li>From the command line (e.g. <pre>bash</pre>), run <pre>cat * > ../merged-text.txt</pre> to merge all the OCR'd text files into one file. If using Powershell, try <pre>type * > ..\merged-text.txt</pre></li>
-            <li>Visit <a href="https://www.databasic.io/en/wordcounter/">DataBasic's WordCounter page</a>, click "upload a file", select "merged-text.txt" and click "COUNT".</li>li>
+            <li>Visit <a href="https://www.databasic.io/en/wordcounter/">DataBasic's WordCounter page</a>, click "upload a file", select "merged-text.txt" and click "COUNT".</li>
         </ol>
 
 
